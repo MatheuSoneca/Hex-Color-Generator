@@ -1,0 +1,27 @@
+body {
+  background-color: black;
+}
+
+main {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+button {
+  height: 75px;
+  width: 200px;
+  margin-right: 8rem;
+
+  color: white;
+  background: black;
+}
+
+input {
+  height: 75px;
+  width: 200px;
+  background: transparent;
+  border: 0;
+}
