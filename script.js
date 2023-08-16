@@ -1,7 +1,7 @@
 const button = document.querySelector("button")
 const colorInput = document.querySelector("input")
 const bodyColor = document.querySelector("body")
-
+const colorText = document.querySelector(".colorText")
 
 const generateHexColor = () =>{
   const hexNumber = Math.floor(Math.random()*16777215).toString(16)
@@ -11,13 +11,14 @@ const generateHexColor = () =>{
 
 const changeBackgroundColor = () => {
   const randomColor = generateHexColor()
-  colorInput.value = button.style.color = bodyColor.style.backgroundColor = randomColor
+  colorInput.value = bodyColor.style.backgroundColor = randomColor
+  colorText.textContent = randomColor.toUpperCase()
+}
+
+const changeBackgroundColor2 = () => {
+  bodyColor.style.backgroundColor = colorInput.value
+  colorText.textContent = colorInput.value.toUpperCase() 
 }
 
 button.onclick = () => changeBackgroundColor()
-colorInput.onmouseout = () => {
-  bodyColor.style.backgroundColor = button.style.color = colorInput.value
-}
-
-/* todo
-  Change the font color for one default, and add some shadow. */
+colorInput.onmouseout = () => changeBackgroundColor2()

@@ -1,13 +1,27 @@
 body {
-  background-color: black;
+  background-color:#000000;
 }
 
 main {
   display: flex;
-  flex: 1;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
+}
+
+div {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.colorText {
+  color: white;
+  height: fit-content;
+  margin-top: 100px;
+  text-shadow: 2px 2px 8px black;
 }
 
 button {
@@ -18,11 +32,12 @@ button {
   color: white;
   background: black;
   opacity: 85%;
+  box-shadow: 2px 2px 8px black;
 }
 
 input {
   height: 75px;
   width: 200px;
   background: transparent;
-  border: 0;
+  box-shadow: 2px 2px 8px black;
 }
